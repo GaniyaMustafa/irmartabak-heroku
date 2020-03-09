@@ -1,0 +1,15 @@
+{% extends 'formbase.html' %}
+
+{% block menu %}
+    <div style="background-color: black;color:white; width: 30%;height: 25rem; padding-top: 150px;border-radius: 50px">
+            {% for url, name in list %}
+                {% if name == selected %}
+                    <a href="{{url}}" style="text-decoration: none; color: gray;"><h3>{{name}}</h3></a>
+                {% else %}
+                    <a href="{{url}}" style="text-decoration: none; color: white;"><h3>{{name}}</h3></a>
+                {% endif %}
+            {% endfor %}
+        </div>
+{% endblock menu %}
+
+

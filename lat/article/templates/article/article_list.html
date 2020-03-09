@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Article List
+{% endblock title %}
+
+{% block contents %}
+    <h1>List Article</h1>
+    {% for article in article_list %}
+        <h2>{{article.title}}</h2>
+        <h2>{{article.create_at}} | {{article.category}}</h2>
+        <p>{{article.body|truncatewords:100}} Selengkapnya</p>
+    {% endfor %}
+{% endblock contents %}
+    

@@ -1,0 +1,23 @@
+{% extends 'uploadFile/formbase.html' %}
+
+{% block page_title %}
+Title
+{% endblock page_title %}
+
+{% block form %}
+    {% for p in pagination %}
+            <img src="/media/{{p.image}}" style="width: auto; height: 200px; border: 4px inset black">&nbsp;
+    {% endfor %}
+    <br>
+    {% for i in pagination.paginator.page_range %}
+        {% if i.has_previous %}
+            <a href="?page={{pagination.previous_page_number}}">Prev</a>
+        {% endif %}
+        <a href="?page={{i}}" style="border: 2px solid black;">{{i}}</a>
+        {% if i.has_previous %}
+            <a href="?page={{pagination.next_page_number}}">Next</a>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock form %}
+

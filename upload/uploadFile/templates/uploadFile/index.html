@@ -1,0 +1,16 @@
+{% extends 'uploadFile/formbase.html' %}
+
+{% block page_title %}
+Title
+{% endblock page_title %}
+
+{% block form %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <input type="submit">
+</form>
+{% endblock form %}
+

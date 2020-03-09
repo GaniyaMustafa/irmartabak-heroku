@@ -1,0 +1,379 @@
+@charset "UTF-8";
+@import url("bootstrap.min.css");
+@import url("materialdesignicons.min.css");
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url("../fonts/Gilroy-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Gilroy-Heavy';
+  src: url("../fonts/Gilroy-Heavy.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Product-Sans';
+  src: url("../fonts/product_sans_regular.woff") format("woff");
+  src: url("../fonts/product_sans_regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Product-Sans Bold';
+  src: url("../fonts/product_sans_bold.woff") format("woff");
+}
+
+.display-1, .display-2, .display-3, .display-4, .display-5 {
+  font-family: 'Gilroy-Heavy';
+}
+
+.display-3 {
+  font-size: 3.5rem;
+}
+
+.display-4 {
+  font-size: 2.4rem;
+}
+
+.card-img-overlay .display-4 {
+  font-size: 1.6rem;
+}
+
+.hidedesktop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.navbar {
+  width: 100%;
+  z-index: 99;
+}
+
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  z-index: 100;
+  overflow-y: hidden !important;
+  height: 100%;
+}
+
+.sidebar ul {
+  overflow-y: hidden !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sidebar ul a {
+  color: black;
+  padding: 0.5rem 0.5rem;
+}
+
+.sidebar ul a:hover {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  background-color: white;
+}
+
+.sidebar .arrow {
+  display: none;
+}
+
+.martabak, .fit-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.martabak {
+  max-height: 100%;
+}
+
+.aboutus {
+  position: relative;
+}
+
+.map-point {
+  height: 360px;
+  overflow-y: scroll;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-img-overlay .display-4 {
+    font-size: 3rem;
+  }
+  .display-3 {
+    font-size: 4.5rem;
+  }
+  .display-4 {
+    font-size: 3rem;
+  }
+  .display-5 {
+    font-size: 2rem;
+  }
+  .hidedesktop {
+    display: none;
+  }
+  .navigation {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .sidebar {
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    min-width: 60px;
+    position: absolute;
+    height: 100vh;
+    right: 0;
+  }
+  .sidebar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.5rem;
+  }
+  .sidebar ul a {
+    padding: 0.5rem 0.5rem;
+  }
+  .sidebar .arrow {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: #181818;
+    color: white;
+    font-size: 2rem;
+  }
+  .sidebar .arrow:hover {
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    background-color: #FFD645;
+    color: black;
+  }
+  .nav-link {
+    border-style: none none solid none;
+    border-color: #FFD645;
+    border-width: 0px;
+  }
+  .martabak {
+    height: 100vh;
+    max-height: 100vh;
+  }
+  .aboutus {
+    position: absolute;
+    right: 0;
+  }
+  .map-point {
+    height: auto;
+    overflow-y: hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD645;
+}
+
+html, body, p {
+  font-family: 'Gilroy-Regular';
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  scroll-behavior: smooth;
+}
+
+section {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#favorite, #landing, #map, #comment {
+  min-height: 100% !important;
+}
+
+.bg-primary {
+  background-color: #FFD645 !important;
+}
+
+.bg-light {
+  background-color: #ebebeb !important;
+}
+
+.bg-white {
+  background-color: white !important;
+}
+
+.btn {
+  font-family: 'Product-Sans Bold';
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: #FFD645 !important;
+  color: #181818;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #181818 !important;
+}
+
+.navbar-brand {
+  margin: 0 3%;
+}
+
+.nav-item {
+  margin: 0.5rem 4%;
+}
+
+.nav-item .nav-link {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  font-family: 'Product-Sans Bold';
+  font-size: 14px;
+  text-transform: uppercase;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-item .nav-link:hover {
+  background-color: #FFD645;
+  border-width: 3px;
+}
+
+a.router-link-active {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  border-width: 3px !important;
+}
+
+.lead, .lead2 {
+  font-family: 'Gilroy-Regular';
+  font-size: 1.5rem;
+}
+
+.lead2 {
+  font-size: 1.2rem;
+}
+
+.lead3 {
+  font-family: 'Product-Sans Bold';
+  text-transform: uppercase;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+}
+
+.dropdown-menu .dropdown-item {
+  font-size: 14px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #FFD645;
+}
+
+.card * {
+  border-radius: 0px;
+}
+
+.card .card-img-top {
+  min-height: 420px;
+}
+
+.card-img-overlay {
+  background-color: rgba(255, 214, 69, 0.8);
+  display: inline-block;
+  top: auto;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.modal-header, .modal-footer, .modal-content {
+  border: 0 !important;
+  border-radius: 0;
+}
+
+.card-img-overlay2 {
+  color: white;
+  background-color: rgba(24, 24, 24, 0.9);
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 1.25rem;
+  top: 0;
+  bottom: 0;
+  height: 200px;
+}
+
+.round {
+  border-radius: 100%;
+  height: 120px;
+  width: 120px;
+}
+
+.border-none {
+  border: 0;
+}
+
+.not {
+  background-color: white !important;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.rating {
+  color: #FFD645;
+}
+
+.price::after {
+  content: ',00*';
+  font-size: 3rem;
+}
+
+.line::after {
+  margin: 0px 8px;
+  letter-spacing: -3px;
+  content: '——';
+}
+
+.map-point .container {
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  padding: 1rem 1rem;
+  margin: 2rem 0rem;
+}
+
+.map-point .container:hover {
+  cursor: pointer;
+  background-color: #FFD645 !important;
+}
+
+.map-point .active {
+  background-color: #FFD645 !important;
+}
+/*# sourceMappingURL=main.css.map */

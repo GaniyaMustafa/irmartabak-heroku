@@ -1,0 +1,133 @@
+@import url('bootstrap.min.css')
+@import url('materialdesignicons.min.css')
+@import 'variable'
+@import 'fontpack'
+@import 'mixins'
+@import 'mobile'
+
+::-webkit-scrollbar 
+  width: 8px
+::-webkit-scrollbar-track 
+  background: $secondary
+::-webkit-scrollbar-thumb 
+  background: $primary
+
+html,body,p
+  @include primaryfont
+  user-select: none
+  scroll-behavior: smooth
+section
+  overflow-x: hidden
+  min-height: 100vh
+#favorite, #landing, #map, #comment
+  min-height: 100% !important
+
+//===== Boostrap Modification ======\\
+.bg-primary
+    background-color: $primary !important
+.bg-light
+    background-color: #ebebeb !important
+.bg-white
+    background-color: white !important
+.btn
+  @include secondaryfont-bold
+  font-size: 16px
+  text-transform: uppercase
+  border-radius: 0
+.btn-primary
+  background-color: $primary !important
+  color: $secondary
+  border: none
+  &:hover
+    background-color: $secondary !important
+.navbar-brand
+  margin: 0 3%
+.nav-item
+  margin: 0.5rem 4%
+  .nav-link
+      transition: 1s ease-in-out
+      @include secondaryfont-bold
+      font-size: 14px
+      text-transform: uppercase
+      transition: 0.1s ease-in-out
+      padding: 0.5rem 1rem !important
+      &:hover
+        background-color: $primary
+        border-width: 3px
+a.router-link-active
+  transition: 1s ease-in-out
+  border-width: 3px !important
+.lead,.lead2
+  @include primaryfont
+  font-size: 1.5rem
+.lead2
+  font-size: 1.2rem
+.lead3
+  @include secondaryfont-bold
+  text-transform: uppercase
+.dropdown-menu
+  border-radius: 0
+  .dropdown-item
+    font-size: 14px
+    &:hover
+      background-color: $primary
+      
+// .active
+//   border-width: 3px
+.card 
+    *
+      border-radius: 0px
+    .card-img-top
+      min-height: 420px
+.card-img-overlay
+  background-color: fade-out($primary,0.2)
+  display: inline-block
+  top: auto
+.container
+  max-width: 100%
+.modal-header, .modal-footer, .modal-content
+  border: 0 !important
+  border-radius: 0
+.card-img-overlay2
+  color: white
+  background-color: fade-out($secondary,0.1)
+  position: absolute
+  left: 0
+  right: 0
+  padding: 1.25rem
+  top: 0
+  bottom: 0
+  height: 200px
+.round
+  border-radius: 100%
+  height: 120px
+  width: 120px
+.border-none
+  border: 0
+//===== End of modification =====\\
+
+.not
+  background-color: white !important
+.inline-block
+  display: inline-block
+.rating
+  color: $primary
+.price
+  &::after
+    content: ',00*'
+    font-size: 3rem
+.line
+  &::after
+    margin: 0px 8px
+    letter-spacing: -3px
+    content: '——'
+.map-point
+  .container
+    transition: 0.1s ease-in-out
+    padding: 1rem 1rem
+    margin: 2rem 0rem
+    &:hover
+      cursor: pointer
+      background-color: $primary !important
+  .active
+    background-color: $primary !important
